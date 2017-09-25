@@ -108,7 +108,7 @@
                     calculateRoll($diceSides);
                     
                     
-                    echo "Roll type". determineRollType($diceSides);
+                    // echo "Roll type". determineRollType($diceSides); // unable to get this function to work.
                     echo "</div>";
                     
                 }
