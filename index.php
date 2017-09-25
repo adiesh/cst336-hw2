@@ -83,7 +83,7 @@
                 //           * displayDice ==> pass in two elements into this function
                 
                 function rollDie($die) {
-                    $randomValue = rand(0,0); // variable $randomValue. create 1 number between 0-5.remember, 0 starts as the first item of your array $die (1)
+                    $randomValue = rand(0,5); // variable $randomValue. create 1 number between 0-5.remember, 0 starts as the first item of your array $die (1)
                     $dieSide = $die[$randomValue]; // load $randomValue into $dieSide
                     
                     return $dieSide;
