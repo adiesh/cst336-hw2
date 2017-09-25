@@ -58,7 +58,7 @@
                     
                     
                     $diceSides = array(); // declare an empty array called "diceSides"
-                    for ($i=1;$i<3;$i++) { // loop 2 times {
+                    for ($i=1;$i<3;$i++) { // loop 2 times 
                         $dieSide = rollDie($die); //     call rollDie() ==> returns a single dice side. 
                         
                         // push the result of rollDie into the array "diceSides"
@@ -95,20 +95,16 @@
                 function displayDice($diceSides) {
              
                     echo "<div id='output'>";
-                    //figure out way to get image
-                    //echo "Value: ". $diceSides[0] <"br />";
-                    //echo "Value: ".$diceSides[1] <"br />";
                    
                     for ($i = 0; $i < count($diceSides); $i++){
-                        //$dice = $dieSides[$i]["imgURL"];
-                        //echo "imgURL: ".$dieSide."<br>";
                         echo "<img src='".$diceSides[$i]["imgURL"]."'>";
                     }
                     
                     calculateRoll($diceSides);
                     
-                    
-                    // echo "Roll type". determineRollType($diceSides); // unable to get this function to work.
+                    "<br />";
+                    echo "Roll type: ". determineRollType($diceSides); 
+                    "<br />";
                     echo "</div>";
                     
                 }
@@ -135,34 +131,136 @@
                 
                  
                 
-                function determineRollType($diceSides) { // trying to list all possible roll types, but unable to display message. 
+                function determineRollType($diceSides) {  
+                    echo "<div id='rollType'>";
                     
-                    /*
-                    for ($i = 0; $i < count($diceSides); $i++) { // trying to echo out all elements of the array. instead of getting elements, i just get "array" as my output.
-                        echo $diceSides[$i] . "\n";
-                    }
-                    */
-                    
+                    $rollType = "";
             
-                    if ($diceSides[0] == 1 && $diceSides[1] == 1) {
-                           echo "you rolled a snake eyes";
-                           "<br />";
-                   } else if ($diceSides["value"] == 1 && $diceSides["value"] == 2) {
-                           echo "you rolled an Australian yo";
-                           "<br />";
+                    if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 1) { // need to incorporate "value" to get access to type of rolls
+                        $rollType.= "You rolled a Snake Eyes";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 2) {
+                       $rollType.="Australian Yo";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 3) {
+                        $rollType.="Little Joe From Kokomo";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 4) {
+                        $rollType.="No Field Five";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 5) {
+                       $rollType.= "Easy Six";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 6) {
+                       $rollType.= "Six One You're Done";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 2 && $diceSides[1]["value"] == 1) {
+                       $rollType.= "Ace Caught a Deuce";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 2 && $diceSides[1]["value"] == 2) {
+                       $rollType.= "Ballerina";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 2 && $diceSides[1]["value"] == 3) {
+                       $rollType.= "The Fever";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 2 && $diceSides[1]["value"] == 4) {
+                       $rollType.= "Jimmy Hicks";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 2 && $diceSides[1]["value"] == 5) {
+                       $rollType.= "Benny Blue";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 2 && $diceSides[1]["value"] == 6) {
+                       $rollType.= "Easy Eight";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 3 && $diceSides[1]["value"] == 1) {
+                       $rollType.= "Easy Four";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 3 && $diceSides[1]["value"] == 2) {
+                       $rollType.= "OJ";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 3 && $diceSides[1]["value"] == 3) {
+                       $rollType.= "Brooklyn Forest";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 3 && $diceSides[1]["value"] == 4) {
+                       $rollType.= "Big Red";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 3 && $diceSides[1]["value"] == 5) {
+                       $rollType.= "Eighter From Decatur";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 3 && $diceSides[1]["value"] == 6) {
+                       $rollType.= "Nina From Pasadena";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 4 && $diceSides[1]["value"] == 1) {
+                       $rollType.= "Little Phoebe";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 4 && $diceSides[1]["value"] == 2) {
+                       $rollType.= "Easy Six";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 4 && $diceSides[1]["value"] == 3) {
+                       $rollType.= "Skinny McKinney";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 4 && $diceSides[1]["value"] == 4) {
+                       $rollType.= "Square Pair";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 4 && $diceSides[1]["value"] == 5) {
+                       $rollType.= "Railroad Nine";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 4 && $diceSides[1]["value"] == 6) {
+                       $rollType.= "Big One on the End";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 5 && $diceSides[1]["value"] == 1) {
+                       $rollType.= "Sixie From Dixie";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 5 && $diceSides[1]["value"] == 2) {
+                       $rollType.= "Skinny Dugan";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 5 && $diceSides[1]["value"] == 3) {
+                       $rollType.= "Easy Eight";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 5 && $diceSides[1]["value"] == 4) {
+                       $rollType.= "Jesse James";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 5 && $diceSides[1]["value"] == 5) {
+                       $rollType.= "Puppy Paws";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 5 && $diceSides[1]["value"] == 6) {
+                       $rollType.= "Yo";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 6 && $diceSides[1]["value"] == 1) {
+                       $rollType.= "The Devil";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 6 && $diceSides[1]["value"] == 2) {
+                       $rollType.= "Easy Eight";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 6 && $diceSides[1]["value"] == 3) {
+                       $rollType.= "Lou Brown";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 6 && $diceSides[1]["value"] == 4) {
+                       $rollType.= "Tennessee";
+                       "<br />";
+                   } else if ($diceSides[0]["value"] == 6 && $diceSides[1]["value"] == 5) {
+                       $rollType.= "Six Five No Jive";
+                       "<br />";
+                   } else {
+                       $rollType.= "Midnight";
+                       "<br />";
                    }
                   
+                   
+                   return $rollType; // this must return something like the previous function. 
+                    echo "</div>"; 
                 }
-                
-            
-                
-                play($die); // call our play function with the die object
-                //echo "<div>DONE</div>"; 
             ?>
-        
-            <form>
-                <input type="submit" value="Roll the Dice!"/> <!-- button to play the game -->
-            </form>
+            <div id = "play">
+                <?php 
+                    play($die); // call our play function with the die object
+                    //echo "<div>DONE</div>";
+                ?>
+                <form>
+                    <input type="submit" value="Roll the Dice!"/> <!-- button to play the game -->
+                </form>
+            </div>
+            
         </div>
     </body>
 </html>

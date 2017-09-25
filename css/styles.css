@@ -5,7 +5,7 @@ body {
 }
 
  #main {
-    width:20px;
+    width:40px;
     height:50px;
     position:relative;
     margin:0 auto;
@@ -24,9 +24,22 @@ body {
  #result{
     font-family: 'Pacifico', cursive;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 0.5em;
     padding: 15px;
+    letter-spacing: 2px;
+    width: 15;
+    word-spacing: 15px;
  }
  
  
+ #rollType{
+     padding: 15px;
+     word-spacing: 15px;
+ }
+ 
+ 
+ #play {
+     position: relative;
+     margin: 0 auto;
+ }
  
