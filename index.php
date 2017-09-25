@@ -120,7 +120,7 @@
                        
                    }
                    "<br />";
-                   echo "You rolled a total of: ".$totalRoll;
+                   echo "Total roll: ".$totalRoll;
                    "<br />";
             
                    

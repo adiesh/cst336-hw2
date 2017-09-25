@@ -18,28 +18,27 @@ body {
     width:200px;   
     margin:0 auto;
     text-align:center;
-    line-height: .7em;
+    line-height: 1.5em;
+    font-size: 1em;
  }
     
  #result{
     font-family: 'Pacifico', cursive;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 1em;
     padding: 15px;
     letter-spacing: 2px;
     width: 15;
-    word-spacing: 15px;
  }
  
  
  #rollType{
      padding: 15px;
-     word-spacing: 15px;
  }
  
  
  #play {
      position: relative;
-     margin: 0 auto;
+     margin: 0 px auto;
  }
  
