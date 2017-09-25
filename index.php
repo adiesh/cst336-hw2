@@ -137,7 +137,7 @@
                     $rollType = "";
             
                     if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 1) { // need to incorporate "value" to get access to type of rolls
-                        $rollType.= "You rolled a Snake Eyes";
+                        $rollType.= "Snake Eyes";
                        "<br />";
                    } else if ($diceSides[0]["value"] == 1 && $diceSides[1]["value"] == 2) {
                        $rollType.="Australian Yo";
